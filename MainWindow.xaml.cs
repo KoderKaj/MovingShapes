@@ -23,6 +23,17 @@ namespace MovingShapes
         public MainWindow()
         {
             InitializeComponent();
+            Ellipse ellipse = new Ellipse();
+            ellipse.Height = 30; ellipse.Width = 20;
+            ellipse.Fill = new SolidColorBrush(Colors.OrangeRed);
+            ellipse.RenderTransform = new TranslateTransform(60, 70);
+            cnvsMain.Children.Add(ellipse);
+            ellipse.LayoutTransform = new RotateTransform(45);
+
+            Ellipse circle = new Ellipse();
+            circle.Width = 20; circle.Height = 20;
+            circle.Stroke = Brushes.Blue;
+            cnvsMain.Children.Add(circle);
         }
     }
 }
